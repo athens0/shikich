@@ -1,0 +1,80 @@
+:root {
+    --font-main: Helvetica Neue, Arial, Verdana, sans-serif;
+    --font-alt: Open Sans, Helvetica Neue, Arial, Verdana, sans-serif;
+
+    --subline-bg: #e8ebef;
+    --subline-border: #d8dde4;
+    --footer-color: #555;
+    --link-color: #176093;
+    --link-hover: #dd5202;
+}
+
+body {
+    width: max-content;
+}
+
+.subline {
+    background: var(--subline-bg);
+    border-left: 5px solid var(--subline-border);
+    color: #123;
+
+    margin-bottom: 10px;
+    padding: 0 10px;
+
+    font: 700 1.2rem var(--font-alt);
+    line-height: 2rem;
+}
+
+.main-trt {
+    margin-bottom: 15px;
+}
+
+.property {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+    justify-content: left;
+    align-items: center;
+}
+
+.property:last-child {
+    margin-bottom: 0;
+}
+
+.property input {
+    margin-right: 5px;
+}
+
+.property-g {
+    width: 100%;
+    padding-left: 20px;
+    padding-top: 5px;
+}
+
+footer {
+    background: white;
+    color: var(--footer-color);
+    font: 700 0.7rem var(--font-main);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+footer a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--link-hover);
+}
+
+footer .feedback {
+    display: inline-block;
+    width: max-content;
+}
+
+footer .copyright {
+    display: inline-block;
+    width: max-content;
+}

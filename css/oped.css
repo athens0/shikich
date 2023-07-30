@@ -1,0 +1,12 @@
+#oped_list {
+    max-height: 240px;
+    overflow: hidden;
+}
+
+#shortener_oped {
+    margin-bottom: 15px;
+}
+
+#oped_list .oped-theme {
+    margin-bottom: 10px;
+}

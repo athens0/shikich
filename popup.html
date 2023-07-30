@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/popup.css">
+    <script src="scripts/popup.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="subline">ShikiCh</h1>
+    </header>
+    <div class="main-trt">
+        <div class="property">
+            <input class="checkbox" type="checkbox" id="i_shiki_redirect">
+            <span>Открывать шикимори при нажатии (если не открыт).</span>
+        </div>
+        <div class="property mb-0">
+            <input class="checkbox" type="checkbox" id="i_oped_enabled">
+            <span>Добавить опенинги и эндинги к тайтлам.</span>
+            <div class="property-g" id="i_oped_enabled_sub">
+                <div class="property">
+                    <input class="checkbox" type="checkbox" id="i_oped_rusificate">
+                    <span title="меняет 'by' на 'от'">Русификация (бета).</span>
+                </div>
+                <div class="property">
+                    <input class="checkbox" type="checkbox" id="i_oped_youtube_search">
+                    <span title="добавляет к темам ссылку на поиск в ютубе">Поиск в ютубе.</span>
+                </div>
+            </div>
+        </div>
+        <div class="property">
+            <input class="checkbox" type="checkbox" id="i_search_online">
+            <span>Добавить ссылку на поиск тайтла в блокино.</span>
+        </div>
+    </div>
+    <footer>
+        <a target="_blank" href="https://discordapp.com/users/513994021367185420" class="feedback">Предложить идею</a>
+        <span class="copyright">© <a target="_blank" href="https://github.com/athens0" class="git-link">athens1ru</a> 2023</span>
+    </footer>
+    <script src="scripts/settings.js"></script>
+</body>
+</html>
