@@ -9,7 +9,7 @@ async function getCurrentTab() {
 async function checkCurrentTab() {
     try{
         let tab = await getCurrentTab();
-        const checkUrl = /^(http.:\/\/shikimori.(me|org|one)\/animes\/.+)/.test(tab.url);
+        const checkUrl = /^(http.:\/\/shikimori.(me|org|one)\/.+)/.test(tab.url);
         if (tab.url != 'chrome://newtab/' && !checkUrl) {
             chrome.tabs.create({active: true, index: tab.index + 1, url: linkToSite});
         }else if(tab.url == 'chrome://newtab/') chrome.tabs.update(undefined, { active: true, url: linkToSite});
