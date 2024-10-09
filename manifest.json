@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "ShikiCh",
     "description": "Расширение для сайта shikimori.me\nДобавляет удаленные/новые функции сайту. Можно настроить под себя.",
-    "version": "0.2",
+    "version": "0.3",
     "action": {
         "default_popup": "popup.html",
         "default_icon": "img/icon.png"

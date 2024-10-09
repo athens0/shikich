@@ -1,3 +1,5 @@
+const linkToSite = "https://shikimori.one/";
+
 async function getCurrentTab() {
     let queryOptions = { active: true, lastFocusedWindow: true };
     let [tab] = await chrome.tabs.query(queryOptions);
@@ -7,9 +9,10 @@ async function getCurrentTab() {
 async function checkCurrentTab() {
     try{
         let tab = await getCurrentTab();
-        if (tab.url != 'chrome://newtab/' && !tab.url.startsWith("https://shikimori.me")) {
-            chrome.tabs.create({active: true, index: tab.index + 1, url: "https://shikimori.me/"});
-        }else if(tab.url == 'chrome://newtab/') chrome.tabs.update(undefined, { active: true, url: "https://shikimori.me/" });
+        const checkUrl = /^(http.:\/\/shikimori.(me|org|one)\/animes\/.+)/.test(tab.url);
+        if (tab.url != 'chrome://newtab/' && !checkUrl) {
+            chrome.tabs.create({active: true, index: tab.index + 1, url: linkToSite});
+        }else if(tab.url == 'chrome://newtab/') chrome.tabs.update(undefined, { active: true, url: linkToSite});
     }catch(e){
         console.log('ShikiCh: Произошла неизвестная ошибка, попробуйте перезапустить браузер\nПодробнее: ' + e.name + ': ' + e.message);
     }
@@ -20,6 +23,5 @@ function main() {
         if(result.shiki_redirect) checkCurrentTab();
     });
 }
-
 
 main();

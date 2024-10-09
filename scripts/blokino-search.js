@@ -1,7 +1,7 @@
 (() => {
     const inner = '<div class="line"><a class="b-link_button dark" id="blokino-btn-link" href="" title="blokino">Онлайн просмотр</a></div><div class="kind">blokino.org</div>';
     const checkExist = () => (document.getElementsByClassName('watch-online')[0] ? true : false);
-    const checkUrl = () => /^(http.:\/\/shikimori.me\/animes\/.+)/.test(window.location.href);
+    const checkUrl = () => /^(http.:\/\/shikimori.(me|org|one)\/animes\/.+)/.test(window.location.href);
     const blokino = 'https://vip.blokino.org/text/poisk/?q=';
 
     function getUrl(prompt){

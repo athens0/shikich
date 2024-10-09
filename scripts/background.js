@@ -1,6 +1,7 @@
 try{
     chrome.webNavigation.onHistoryStateUpdated.addListener(function(details) {
-        if(details.url.startsWith('https://shikimori.me/animes/')){
+        const checkUrl = () => /^(http.:\/\/shikimori.(me|org|one)\/animes\/.+)/.test(details.url);
+        if(checkUrl){
             console.log('executed at ' + details.url);
             chrome.scripting.executeScript({
                 files: ['scripts/oped.js', 'scripts/blokino-search.js'],

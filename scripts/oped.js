@@ -2,7 +2,7 @@
     const inner = '<div class="c-column block_m"><div class="subheadline">Опенинги</div><div class="cc" id="op-list"></div></div><div class="c-column block_m"><div class="subheadline">Эндинги</div><div class="cc" id="ed-list"></div></div>';
     const innerH = '<div class="shade"></div><div class="expand"><span>Развернуть</span></div>';
     const insertAfter = (refn, newn) => {refn.parentNode.insertBefore(newn, refn.nextSibling);}
-    const checkUrl = () => /^(http.:\/\/shikimori.me\/animes\/.+)/.test(window.location.href);
+    const checkUrl = () => /^(http.:\/\/shikimori.(me|org|one)\/animes\/.+)/.test(window.location.href);
     const ylink = 'https://www.youtube.com/results?search_query=';
     const jikan = 'https://api.jikan.moe/v4/anime/';
 
